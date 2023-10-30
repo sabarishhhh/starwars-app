@@ -126,7 +126,7 @@ const DetailCard = () => {
                 </Text>
               </Box>
               <Image
-                src="./src/assets/logo.png"
+                src="public/logo.png"
                 alt="logo"
                 w={"300px"}
                 opacity={0.3}

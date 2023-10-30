@@ -95,7 +95,7 @@ export default function CharacterCard(props) {
           </CardBody>
           <CardFooter>
             <Box>
-              <Button variant="solid" bg="#3ccf91" onClick={handleDetailpage}>
+              <Button variant="solid" bg="#e53e3e" color={"white"} _hover={{ color: "white",bg:"red.800" }} onClick={handleDetailpage}>
                 View Details
               </Button>
               <IconButton
