@@ -24,11 +24,18 @@ const DetailCard = () => {
       justifyContent="center"
     >
       <Box
+
         bg={useColorModeValue("#12151d", "gray.800")}
         maxW="sm"
         borderWidth="1px"
         borderColor={"whiteAlpha.200"}
+        className="star-wars-laser-border-vertical"
         rounded="md"
+        drag='x'
+        dragConstraints={{ left: -100, right: 100 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition='0.5s linear'
         minW={[50,1000]}
         minH={500}
         shadow="lg"
@@ -122,7 +129,7 @@ const DetailCard = () => {
                 src="./src/assets/logo.png"
                 alt="logo"
                 w={"300px"}
-                opacity={0.1}
+                opacity={0.3}
               />
             </Flex>
           </Box>

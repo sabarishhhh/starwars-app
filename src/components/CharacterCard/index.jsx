@@ -35,15 +35,6 @@ export default function CharacterCard(props) {
 
   //handle for select the favorite and storing in ls
   const handleFavorite = () => {
-    fav &&
-      toast({
-        title: "Added to favorite !",
-        description: `${name} added to favorites`,
-        position: "top-right",
-        status: "success",
-        duration: 9000,
-        isClosable: true,
-      });
     setFav((prev) => !prev);
 
     let prevData = localStorage.getItem("fav");
@@ -54,8 +45,24 @@ export default function CharacterCard(props) {
     }
     if (prevData.has(name)) {
       prevData.delete(name);
+      toast({
+        title: "Removed from favorite !",
+        description: `${name} removed from favorites`,
+        position: "top-right",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
     } else {
       prevData.add(name);
+      toast({
+        title: "Added to favorite !",
+        description: `${name} added to favorites`,
+        position: "top-right",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
     }
     localStorage.setItem("fav", JSON.stringify(Array.from(prevData)));
   };

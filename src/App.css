@@ -1,0 +1,36 @@
+/* CSS for the vertical Star Wars laser-like glow border effect */
+.star-wars-laser-border-vertical {
+    position: relative;
+  
+    /* Your existing styles go here */
+  
+    /* Add a before pseudo-element for the vertical laser glow on the left side */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px; /* Adjust the width as needed */
+      height: 100%;
+      border: 2px solid transparent;
+      border-image: linear-gradient(0deg, #ff0000, transparent, #ff0000d9) 1;
+      border-image-slice: 1;
+      animation: star-wars-laser-vertical 2s linear infinite;
+    }
+  }
+  
+  /* Keyframes animation for the vertical Star Wars laser effect on the left side */
+  @keyframes star-wars-laser-vertical {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.02);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 0;
+    }
+  }
+  

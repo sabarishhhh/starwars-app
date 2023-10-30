@@ -4,7 +4,7 @@ const CharacterList = (data) => {
   return (
     <>
       {" "}
-      <Heading pl={20} pt={10} bg={"#12141d"} color={"whiteAlpha.300"}>
+      <Heading pl={20} pt={10} bg={"#12141d"} color={"red.500"}>
         CHARACTERS
       </Heading>
       <Flex
