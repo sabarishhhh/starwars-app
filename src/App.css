@@ -1,10 +1,6 @@
 /* CSS for the vertical Star Wars laser-like glow border effect */
 .star-wars-laser-border-vertical {
     position: relative;
-  
-    /* Your existing styles go here */
-  
-    /* Add a before pseudo-element for the vertical laser glow on the left side */
     &::before {
       content: "";
       position: absolute;
